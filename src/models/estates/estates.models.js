@@ -7,6 +7,12 @@ const estateSchema = new Schema({
         trim: true
        
     },
+    slug:{
+        type: String,
+        required: true,
+        trim: true
+       
+    },
     description:{
         type: String,
         required: true,
