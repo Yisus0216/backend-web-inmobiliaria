@@ -1,4 +1,4 @@
-import { Schema } from "mongoose";
+import { model, Schema } from "mongoose"
 
 const estateSchema = new Schema({
     name:{
@@ -82,7 +82,7 @@ const estateSchema = new Schema({
         default: true
     },
     amenities:[{
-        type:Shema.Types.ObjectId,
+        type: Schema.Types.ObjectId,
         ref:'Amenities'
     }],
     category_id:[{
@@ -102,7 +102,7 @@ const estateSchema = new Schema({
         ref:'Multimedia',
     },
 }, {
-    timestamps:true
+    timeStamps:true
 })
 
 export const Estate = model('Estate', estateSchema)

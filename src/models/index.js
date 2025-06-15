@@ -1,4 +1,4 @@
-import { Estate } from "./estates/estates.models,js";
+import { Estate } from "./estates/estates.models.js";
 
 export {
     

@@ -19,14 +19,14 @@ async function createEstate (estateData) {
 
     // crear una nueva propiedad
 
-    const newEsate = await  Estate.create(estateData)
-    return newEsate
+    const newEstate = await  Estate.create(estateData)
+    return newEstate
 }
 
 
 // Obtner todas la propiedades 
 
-async function getAllState () {
+async function getAllEstates () {
     const estates = await Estate.find({})
     return estates
 }
@@ -56,6 +56,6 @@ async function getEstateByIdOrSlug (identifier){
 
 export {
     createEstate,
-    getAllState,
+    getAllEstates,
     getEstateByIdOrSlug
 }
