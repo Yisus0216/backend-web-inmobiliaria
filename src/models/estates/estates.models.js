@@ -102,7 +102,7 @@ const estateSchema = new Schema({
         ref:'Multimedia',
     },
 }, {
-    timeStamps:true
+    timestamps:true
 })
 
 export const Estate = model('Estate', estateSchema)

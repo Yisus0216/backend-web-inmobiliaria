@@ -5,6 +5,7 @@ import cors from 'cors'; // permite que personas de otros lugares puedan hacer p
 import http from 'http'
 //importar las rutas de Estate 
 import estateRoutes from './routes/estates/estates.routes.js'
+import amenityRoutes from './routes/amenities/amenities.routes.js'
 
 const app = express();  // creando mi servidor con Express.
 app.use(cors());  // Le digo a mi servidor: “acepta pedidos desde otros lugares, no solo de los que están en la misma dirección”.
@@ -15,6 +16,7 @@ const httpServer = http.createServer(app); // Esto crea un servidor HTTP que usa
 
 //Definiendo las rutas principal al momento de acceder al dominio 
 app.use('/estates', estateRoutes)
+app.use('/amenities', amenityRoutes)
 
 app.get('/', (req, res) =>{
     res.json({
