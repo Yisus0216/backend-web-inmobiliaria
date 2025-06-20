@@ -9,7 +9,7 @@ const estateSchema = new Schema({
     },
     slug:{
         type: String,
-        required: true,
+        
         trim: true
        
     },
@@ -25,13 +25,12 @@ const estateSchema = new Schema({
     },
     currency: {
         type: String,
-        required: true,
         enum: ['USD', 'EUR', 'GBP', 'MXN'],
         default: 'MXN'
     },
     type: {
         type: String,
-        required: true, 
+        
         enum: ['house', 'apartment', 'land', 'commercial'],
         default: 'house'
     },
@@ -39,11 +38,11 @@ const estateSchema = new Schema({
         //Todo: Especificar la forma en la que se va a guardar
         latitud:{
             type: String,
-            required: true
+            
         },
         longitude: {
             type: Number,
-            required: true
+        
         }
     },
     adress: {
@@ -73,7 +72,7 @@ const estateSchema = new Schema({
     status:{
         type: String,
         trim: true,
-        required: true,
+       
         enum: ['available', 'sold', 'rented'],
         deafult: 'available'
     },
@@ -104,5 +103,8 @@ const estateSchema = new Schema({
 }, {
     timestamps:true
 })
+
+//Esta línea crea un modelo de Mongoose a partir de un schema, y lo exporta para que puedas usarlo en otras partes del proyecto.
+
 
 export const Estate = model('Estate', estateSchema)
