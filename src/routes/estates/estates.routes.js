@@ -1,7 +1,7 @@
 import express from 'express'
 import { createEstate, getAllEstates } from '../../useCases/estates/estates.useCases.js'
-
 const router = express.Router()
+
 
 
 // POST estate 
