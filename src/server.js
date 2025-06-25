@@ -6,6 +6,7 @@ import http from 'http'
 //importar las rutas de Estate 
 import estateRoutes from './routes/estates/estates.routes.js'
 import amenityRoutes from './routes/amenities/amenities.routes.js'
+import handlerError from "./middleware/handlerError.js";
 
 const app = express();  // creando mi servidor con Express.
 app.use(cors());  // Le digo a mi servidor: “acepta pedidos desde otros lugares, no solo de los que están en la misma dirección”.
@@ -26,6 +27,9 @@ app.get('/', (req, res) =>{
     })
 } )
 
+//middleware - handlerError
+
+app.use(handlerError)
 
 
 //Exportando el servidor 

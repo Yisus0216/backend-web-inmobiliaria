@@ -2,6 +2,7 @@
 
 import { isValidObjectId } from "mongoose";
 import { Estate } from "../../models/index.js";
+import { StatusHttp } from "../../lib/statusHttp.js";
 
 // Creando una propiedad
 
@@ -14,7 +15,7 @@ async function createEstate (estateData) {
 
     //lanzamos el error si la propiedad ya existe 
     if(existingEstate){
-        throw new Error(`Ya existe una propiedad con el nombre ${name}`)
+        throw new StatusHttp(`Ya existe una propiedad con el nombre ${name}` ,400)
     }
 
     // crear una nueva propiedad
@@ -48,7 +49,7 @@ async function getEstateByIdOrSlug (identifier){
     // Validar si la propiedad Existe 
 
     if(!estate){
-        throw new Error(`No se encontro la propiedad con el identidficador: ${identifier}`)
+        throw new StatusHttp(`No se encontro la propiedad con el identidficador: ${identifier}`, 404)
     }
 
     return estate 
@@ -75,7 +76,7 @@ async function updateEstate (identifier, newData){
     }
     // Validar si la propiedad fue actualizada 
     if(!updatedEstate){
-        throw new Error(`No se encontro la propiedad con el identidficador: ${identifier}`) 
+        throw new StatusHttp(`No se encontro la propiedad con el identidficador: ${identifier}`,404) 
     }
  return updatedEstate
 }
@@ -98,7 +99,7 @@ async function deleteEstate(identifier){
     // validar si la propiedad fue eleiminda 
 
     if(!deleteEstate){
-        throw new Error(`No se encontro la propiedad con el identidficador: ${identifier}`)
+        throw new StatusHttp(`No se encontro la propiedad con el identidficador: ${identifier}`,404)
     }
 
     return deleteEstate
