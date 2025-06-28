@@ -20,6 +20,7 @@ const httpServer = http.createServer(app); // Esto crea un servidor HTTP que usa
 app.use('/estates', estateRoutes)
 app.use('/amenities', amenityRoutes)
 app.use('/categories', categoryRoutes )
+app.use('/multimedias',multimediasRoutes)
 
 app.get('/', (req, res) =>{
     res.json({
