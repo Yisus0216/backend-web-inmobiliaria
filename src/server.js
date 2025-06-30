@@ -9,6 +9,7 @@ import amenityRoutes from './routes/amenities/amenities.routes.js'
 import handlerError from "./middleware/handlerError.js";
 import categoryRoutes from "./routes/categories/categories.routes.js"
 import multimediasRoutes from "./routes/multimedia/multimedia.routes.js"
+import characteristicsRoutes from "./routes/characteristics/characteristics.routes.js"
 
 const app = express();  // creando mi servidor con Express.
 app.use(cors());  // Le digo a mi servidor: “acepta pedidos desde otros lugares, no solo de los que están en la misma dirección”.
@@ -22,6 +23,7 @@ app.use('/estates', estateRoutes)
 app.use('/amenities', amenityRoutes)
 app.use('/categories', categoryRoutes )
 app.use('/multimedias',multimediasRoutes)
+app.use('/characteristics', characteristicsRoutes)
 
 app.get('/', (req, res) =>{
     res.json({
