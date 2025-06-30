@@ -1,5 +1,5 @@
 import express from 'express'
-const rooter = express.Router()
+const router = express.Router()
 
 
 

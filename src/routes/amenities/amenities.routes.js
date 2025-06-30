@@ -8,6 +8,7 @@ const router = express.Router()
 // POST Para amenidades 
 router.post('/', async(request,response,next) =>{
     try{
+        //si la promesa no se resuelve manda una exepcion
         const body = request.body
         const amenity = await createAmenity(body)
         response.status(201).json({

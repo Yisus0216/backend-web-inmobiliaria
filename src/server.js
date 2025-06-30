@@ -8,6 +8,7 @@ import estateRoutes from './routes/estates/estates.routes.js'
 import amenityRoutes from './routes/amenities/amenities.routes.js'
 import handlerError from "./middleware/handlerError.js";
 import categoryRoutes from "./routes/categories/categories.routes.js"
+import multimediasRoutes from "./routes/multimedia/multimedia.routes.js"
 
 const app = express();  // creando mi servidor con Express.
 app.use(cors());  // Le digo a mi servidor: “acepta pedidos desde otros lugares, no solo de los que están en la misma dirección”.
