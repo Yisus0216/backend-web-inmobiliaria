@@ -4,6 +4,7 @@ import { Category } from "./categories/categories.models.js";
 import { Multimedia } from "./multimedia/multimedia.models.js";
 import { Characteristic } from "./characteristics/characteristics.models.js";
 import { Banner } from "./banners/banners.models.js";
+import { User } from "./users/users.models.js";
 export {
     
     Amenity,
@@ -12,4 +13,5 @@ export {
     Multimedia,
     Characteristic,
     Banner,
+    User
 }
