@@ -43,7 +43,7 @@ router.get('/:id', async(request,response,next)=>{
         response.status(200).json({
             success:true,
             message: 'Banner encontrado con exito',
-            data: banner
+            data: banner6862d97b95416ff433ab703b
         })
     } catch (error) {
         next(error)

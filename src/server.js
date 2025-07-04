@@ -11,6 +11,7 @@ import categoryRoutes from "./routes/categories/categories.routes.js"
 import multimediasRoutes from "./routes/multimedia/multimedia.routes.js"
 import characteristicsRoutes from "./routes/characteristics/characteristics.routes.js"
 import bannersRoutes from "./routes/banners/banners.routes.js"
+import authRoutes from "./routes/auth/auth.routes.js"
 const app = express();  // creando mi servidor con Express.
 app.use(cors());  // Le digo a mi servidor: “acepta pedidos desde otros lugares, no solo de los que están en la misma dirección”.
 app.use(express.json()); // Esto hace que el servidor pueda leer los datos que el cliente le manda (como nombre, correo, mensaje, etc.).
@@ -25,6 +26,7 @@ app.use('/categories', categoryRoutes )
 app.use('/multimedias',multimediasRoutes)
 app.use('/characteristics', characteristicsRoutes)
 app.use('/banners', bannersRoutes)
+app.use('/auth',authRoutes)
 
 app.get('/', (req, res) =>{
     res.json({
