@@ -1,9 +1,15 @@
 import { Estate } from "./estates/estates.models.js";
 import { Amenity } from "./amenities/amenities.models.js";
-
+import { Category } from "./categories/categories.models.js";
+import { Multimedia } from "./multimedia/multimedia.models.js";
+import { Characteristic } from "./characteristics/characteristics.models.js";
+import { Banner } from "./banners/banners.models.js";
 export {
     
     Amenity,
-    Estate
-
+    Estate,
+    Category,
+    Multimedia,
+    Characteristic,
+    Banner,
 }
